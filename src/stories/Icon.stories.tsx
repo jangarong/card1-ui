@@ -1,12 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Icon, { IconProps } from "../components/Icon/Icon";
+import Icon, { IconProps } from "../components/Icon";
 import GitHub from "./assets/icons/github.png";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: "card1-ui/Icon",
   component: Icon,
+  tags: ['autodocs'],
 } as ComponentMeta<typeof Icon>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
