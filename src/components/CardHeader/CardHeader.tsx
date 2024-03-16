@@ -1,9 +1,9 @@
 import React from "react";
+import "./CardHeader.css";
 
 export interface CardHeaderProps {
     /**
-     * Title of the card. This will be centered if this is the only element.
-     * Otherwise, it will be put on the left.
+     * If present, this will be placed on the right side of the header.
      */
     children: JSX.Element;
     /**
@@ -15,7 +15,7 @@ export interface CardHeaderProps {
 
 const CardHeader = (props: CardHeaderProps) => {
     return (
-        <div>
+        <div className="CardHeader TopBorder">
             <div>{props.children}</div>
             {!!props.tip ? <div>{props.tip}</div> : null}
         </div>

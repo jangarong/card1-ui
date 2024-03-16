@@ -1,10 +1,11 @@
 import React from "react";
+import "./CardTitle.css";
 
 export interface CardTitleProps {
     /**
      * Title string.
      */
-    title: string;
+    children: JSX.Element;
     /**
      * This is the subtitle that appears below the title.
      */
@@ -14,9 +15,9 @@ export interface CardTitleProps {
 
 const CardTitle = (props: CardTitleProps) => {
     return (
-        <div>
-            <div>{props.title}</div>
-            <div>{props.subtitle}</div>
+        <div className="TitleContainer Default">
+            <div className="Title">{props.children}</div>
+            <div className="Subtitle">{props.subtitle}</div>
         </div>
     );
 };

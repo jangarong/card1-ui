@@ -16,12 +16,12 @@ const TitleTemplate: ComponentStory<typeof CardTitle> = (props: CardTitleProps) 
 export const Test1 = TitleTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Test1.args = {
-  title: "Jan Garong",
+  children: "Jan Garong",
 };
 
 export const Test2 = TitleTemplate.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Test2.args = {
-  title: "Jan Garong",
+  children: "Jan Garong",
   subtitle: "Software Developer"
 };

@@ -1,0 +1,22 @@
+.CardHeader {
+    padding: 24pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TopBorder {
+    border-style: solid solid none solid;
+    border-radius: 16pt 16pt 0 0;
+    border-width: 1pt;
+    border-color: #7D7D7D;
+}
+
+@media screen and (max-width: 680px) {
+    .CardHeader {
+        flex-direction: row;
+        padding: 12pt;
+    }
+    
+}
+

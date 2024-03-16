@@ -4,6 +4,7 @@ import CardHeader, { CardHeaderProps } from "../components/CardHeader";
 import Next from "./assets/icons/next.png";
 import CardTitle from "../components/CardTitle";
 import Icon from "../components/Icon";
+import "./CardHeader.stories.css";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,7 +15,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const CardHeaderTest: ComponentStory<typeof CardHeader> = (props: CardHeaderProps) => (
-  <div>
+  <div className="Card">
     <CardHeader {...props} />
   </div>
 );
@@ -22,9 +23,9 @@ const CardHeaderTest: ComponentStory<typeof CardHeader> = (props: CardHeaderProp
 export const CardHeaderTest1 = CardHeaderTest.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 CardHeaderTest1.args = {
-  children: (<CardTitle title={"Jan Garong"} subtitle={"Software Developer"} />),
-  tip: (<div>
-    <Icon src={Next} alt={"Next"} />
+  children: (<CardTitle subtitle={"Software Developer"}>Jan Garong</CardTitle>),
+  tip: (<div className="IconContainer">
+    <Icon src={Next} alt={"Next"} size={"sm"} />
     </div>)
 };
 
