@@ -2,4 +2,4 @@ Based off of the following tutorial: https://dev.to/alexeagleson/how-to-create-a
 
 node version 18
 
-TODO: integrate next.js?
+Either use global css variables or inline style system (maybe use context?)
