@@ -1,11 +1,13 @@
 import React from "react";
-import "./CardTitle.css";
+import styles from "./CardTitle.module.css";
 
+// TODO: Could replace with Typography?
 export interface CardTitleProps {
     /**
      * Title string.
      */
-    children: JSX.Element;
+    // TODO: Should it be children or string only
+    title: string;
     /**
      * This is the subtitle that appears below the title.
      */
@@ -15,9 +17,9 @@ export interface CardTitleProps {
 
 const CardTitle = (props: CardTitleProps) => {
     return (
-        <div className="TitleContainer Default">
-            <div className="Title">{props.children}</div>
-            <div className="Subtitle">{props.subtitle}</div>
+        <div className={styles.TitleContainer + " " + styles.Default}>
+            <div className={styles.Title}>{props.title}</div>
+            <div className={styles.Subtitle}>{props.subtitle}</div>
         </div>
     );
 };

@@ -23,9 +23,15 @@ const CardHeaderTest: ComponentStory<typeof CardHeader> = (props: CardHeaderProp
 export const CardHeaderTest1 = CardHeaderTest.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 CardHeaderTest1.args = {
-  children: (<CardTitle subtitle={"Software Developer"}>Jan Garong</CardTitle>),
+  children: (<CardTitle title={"Jan Garong"} subtitle={"Software Developer"} />),
   tip: (<div className="IconContainer">
     <Icon src={Next} alt={"Next"} size={"sm"} />
     </div>)
+};
+
+export const CardHeaderTest2 = CardHeaderTest.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+CardHeaderTest2.args = {
+  children: (<CardTitle subtitle={"Software Developer"}>Jan Garong</CardTitle>)
 };
 
