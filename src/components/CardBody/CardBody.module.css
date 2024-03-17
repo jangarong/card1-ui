@@ -1,0 +1,26 @@
+.CardBody{
+    padding: 24pt;
+    /* background-color: #121212; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* https://www.magicpattern.design/tools/css-backgrounds */
+    background-color: #121212;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #121212 9px ), repeating-linear-gradient( #26262655, #262626 );
+
+}
+
+.Border {
+    border-style: solid solid solid solid;
+    border-width: 1pt;
+    border-color: #7D7D7D;
+}
+
+@media screen and (max-width: 680px) {
+    #body {
+        padding: 18pt 6pt;
+    }
+}
+
