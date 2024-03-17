@@ -5,7 +5,7 @@ export interface CardHeaderProps {
     /**
      * If present, this will be placed on the right side of the header.
      */
-    children: JSX.Element;
+    title: JSX.Element;
     /**
      * If present, this will be placed on the right side of the header.
      */
@@ -18,14 +18,14 @@ const CardHeader = (props: CardHeaderProps) => {
     if (!!props.tip){
         return (
             <div className={styles.CardHeader + " " + styles.TopBorder}>
-                <div>{props.children}</div>
+                <div>{props.title}</div>
                 <div>{props.tip}</div>
             </div>
         );
     }
     return (
         <div className={styles.CardHeader + " " + styles.TopBorder}>
-            <div>{props.children}</div>
+            <div>{props.title}</div>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import styles from "./CardBody.module.css";
 
 export interface CardBodyProps {
     /**
-     * If present, this will be placed on the right side of the header.
+     * Body contents of the card
      */
     children: React.JSX.Element;
     // TODO: Add extra settings for CSS customization/card customization
