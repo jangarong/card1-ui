@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Typography.module.css";
-import { usePalette } from "../index";
-import { ColorTypes } from "../Palette/Palette";
+import { ColorTypes, usePalette } from "../Palette/Palette";
 
 /**
  * Typography component used for writing any text.

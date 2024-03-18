@@ -1,9 +1,4 @@
 import Typography from "./Typography";
-import Palette from "./Palette";
-const { PaletteProvider, usePalette, useTheme } = Palette;
-export default {
-    Typography,
-    PaletteProvider,
-    usePalette,
-    useTheme
-};
+import { PaletteProvider, usePalette, useTheme } from "./Palette";
+
+export { Typography, PaletteProvider, usePalette, useTheme };

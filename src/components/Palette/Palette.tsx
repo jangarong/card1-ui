@@ -1,7 +1,5 @@
-import { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext } from "react";
 
-// const black = '#000000';
-// const dark = '#121212';
 const dark = '#1C1C1C';
 const dark2 = '#262626';
 const lightGrey = '#7D7D7D';
@@ -35,8 +33,8 @@ export interface PaletteContextType {
 export interface PaletteProviderProps {
     children: JSX.Element;
 }
-// TODO: Note, this does not support customized fonts, just colors.
-const defaultPalette = {
+
+const defaultPalette: Palette = {
     dark: {
         base: {
             primary: dark,
@@ -57,7 +55,7 @@ const PaletteContext = createContext<PaletteContextType>({
     setPalette: () => {}
 });
 
-const PaletteProvider = (props: PaletteProviderProps) => {
+export const PaletteProvider = (props: PaletteProviderProps) => {
     const [theme, setTheme] = useState<Theme>('dark');
     const [palette, setPalette] = useState<Palette>(defaultPalette);
 
@@ -65,23 +63,23 @@ const PaletteProvider = (props: PaletteProviderProps) => {
         <PaletteContext.Provider value={{ theme, setTheme, palette, setPalette }} >
             {props.children}
         </PaletteContext.Provider>
-
     );
 };
 
-const usePalette = () => {
-    const {palette, theme, setPalette}: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
+export const usePalette = () => {
+    const { palette, theme, setPalette }: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
     const darkPalette = palette.dark;
     const lightPalette = palette.light;
-    if (theme === 'dark') {
+    if (theme === 'dark' && !!darkPalette) {
         return { palette: darkPalette, setPalette };
     }
-    return { palette: lightPalette, setPalette };
+    else if (theme === 'light' && !!lightPalette) {
+        return { palette: lightPalette, setPalette };
+    }
+    throw new Error('card1-ui: Palette does not exist.');
 }
 
-const useTheme = () => {
-    const {theme, setTheme}: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
+export const useTheme = () => {
+    const { theme, setTheme }: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
     return { theme, setTheme };
 }
-
-export default { PaletteProvider, usePalette, useTheme };
