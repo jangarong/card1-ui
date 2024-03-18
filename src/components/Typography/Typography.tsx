@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Typography.module.css";
+import styles from "./index.module.css";
 
 /**
  * Typography component used for writing any text.
