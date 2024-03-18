@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./CardBody.module.css";
+import { usePalette } from '../Palette/Palette';
 
 export interface CardBodyProps {
     /**
@@ -11,6 +12,7 @@ export interface CardBodyProps {
 
 
 const CardBody = (props: CardBodyProps) => {
+    const { palette } = usePalette();
     return (
         <div className={styles.CardBody + " " + styles.Border}>
             <div>{props.children}</div>

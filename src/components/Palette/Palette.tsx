@@ -75,8 +75,8 @@ export const PaletteProvider = (props: PaletteProviderProps) => {
 
 export const usePalette = () => {
     const {palette, theme, setPalette}: PaletteContext = useContext<PaletteContext>(PaletteContext);
-    const dark = palette.dark;
-    const light = palette.light;
+    const dark: ColorTypes = palette.dark;
+    const light: ColorTypes | undefined = palette.light;
     if (theme === 'dark') {
         return { dark, setPalette };
     }
