@@ -25,7 +25,7 @@ const TradingCardTest: ComponentStory<typeof TradingCard> = (props: TradingCardP
 export const TradingCardTest1 = TradingCardTest.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 TradingCardTest1.args = {
-  children: (<Image src={Magichanics} alt="magichanics" className="BodyArt" />),
+  children: (<Image src={Magichanics} alt="magichanics" className="BodyArt" width={300} />),
   header: {
     title: (<CardTitle title={"Jan Garong"} subtitle={"Software Developer"} />),
   tip: (<div className="IconContainer">

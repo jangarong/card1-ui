@@ -22,6 +22,8 @@ const CardBodyTest: ComponentStory<typeof CardBody> = (props: CardBodyProps) => 
 export const CardBodyTest1 = CardBodyTest.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 CardBodyTest1.args = {
-  children: (<Image src={Magichanics} alt="magichanics" className="BodyArt" />),
+  children: (<div>
+    <Image src={Magichanics} alt="magichanics" className="BodyArt" width={400} />
+    </div>),
 };
 
