@@ -10,11 +10,11 @@ export interface TypographyProps {
      */
     children: JSX.Element;
     /**
-     * CSS text class name as a string.
+     * CSS text class name as a string. Can be one of the following values:
+     * "h1", "h2", p".
      */
     textType?: "h1" | "h2" | "p";
 }
-
 
 const Typography = ({ children, textType = "p" }: TypographyProps) => {
     const className = !!textType ? `${styles.Typography} ${styles[textType.toUpperCase()]}` : styles.Typography;

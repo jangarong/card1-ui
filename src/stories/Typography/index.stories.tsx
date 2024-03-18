@@ -8,6 +8,20 @@ export default {
   title: "card1-ui/Typography",
   component: Typography,
   tags: ['autodocs'],
+  argTypes: {
+    // This will make the control null, which is a workaround to removing the control column
+    //  entirely.
+    children: { control: { type: null }},
+    textType: { control: { type: null } },
+    // TODO: A bit hacky, don't know why these parameters are showing up.
+    '$$typeof': { table: { disable: true } },
+    key: { table: { disable: true } },
+    type: { table: { disable: true } },
+    ref: { table: { disable: true } },
+    props: { table: { disable: true } },
+    _owner: { table: { disable: true } },
+    _store: { table: { disable: true } },
+  },
 } as ComponentMeta<typeof Typography>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
