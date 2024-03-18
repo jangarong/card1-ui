@@ -1,5 +1,7 @@
 import React from "react";
-import styles from "./index.module.css";
+import styles from "./Typography.module.css";
+import { usePalette } from "../index";
+import { ColorTypes } from "../Palette/Palette";
 
 /**
  * Typography component used for writing any text.
@@ -17,9 +19,16 @@ export interface TypographyProps {
 }
 
 const Typography = ({ children, textType = "p" }: TypographyProps) => {
+    const { palette }: { palette: ColorTypes } = usePalette();
+    const colorMap = {
+        h1: palette.text.primary,
+        h2: palette.text.secondary,
+        p: palette.text.primary
+    }
+    const color = colorMap[textType];
     const className = !!textType ? `${styles.Typography} ${styles[textType.toUpperCase()]}` : styles.Typography;
     return (
-        <div className={className}>
+        <div className={className} style={{color: color}}>
             {children}
         </div>
     );
