@@ -1,0 +1,13 @@
+.IconContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.Card {
+    width: 480pt;
+    height: fit-content;
+}
+
+.CardHeader {
+    background-color: #1C1C1C;
+}
