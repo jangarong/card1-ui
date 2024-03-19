@@ -27,11 +27,11 @@ export interface PaletteContextType {
     palette: Palette;
     theme: 'light' | 'dark';
     setTheme: (theme: Theme) => void;
-    setPalette: (newPalette: Palette) => void;
+    // setPalette: (newPalette: Palette) => void;
 }
 
 export interface PaletteProviderProps {
-    children: JSX.Element;
+    children: JSX.Element | JSX.Element[];
 }
 
 const defaultPalette: Palette = {
@@ -51,8 +51,8 @@ const defaultPalette: Palette = {
 const PaletteContext = createContext<PaletteContextType>({
     theme: 'dark',
     palette: defaultPalette,
-    setTheme: () => {},
-    setPalette: () => {}
+    setTheme: () => { },
+    // setPalette: () => {}
 });
 
 export const PaletteProvider = (props: PaletteProviderProps) => {
@@ -60,21 +60,25 @@ export const PaletteProvider = (props: PaletteProviderProps) => {
     const [palette, setPalette] = useState<Palette>(defaultPalette);
 
     return (
-        <PaletteContext.Provider value={{ theme, setTheme, palette, setPalette }} >
+        <PaletteContext.Provider value={{ theme, setTheme, palette }} >
+             { /* add setPalette above when properly implemented*/}
             {props.children}
         </PaletteContext.Provider>
     );
 };
 
 export const usePalette = () => {
-    const { palette, theme, setPalette }: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
+    const { palette, theme }: PaletteContextType = useContext<PaletteContextType>(PaletteContext);
+    { /* add setPalette above when properly implemented*/}
     const darkPalette = palette.dark;
     const lightPalette = palette.light;
     if (theme === 'dark' && !!darkPalette) {
-        return { palette: darkPalette, setPalette };
+        return { palette: darkPalette };
+        { /* add setPalette above when properly implemented*/}
     }
     else if (theme === 'light' && !!lightPalette) {
-        return { palette: lightPalette, setPalette };
+        return { palette: lightPalette };
+        { /* add setPalette above when properly implemented*/}
     }
     throw new Error('card1-ui: Palette does not exist.');
 }
