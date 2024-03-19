@@ -9,3 +9,5 @@ Just my open-sourced component library for future projects!
 Run `npm run storybook` for the docs.
 
 Run `npm run rollup` for creating the `dist` folder.
+
+Run `npx chromatic --project-token=<token>`

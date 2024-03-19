@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import CardHeader from "../../components/CardHeader";
+import { CardHeader } from "../../components";
 import { CardHeaderProps } from "../../components/CardHeader/CardHeader";
 import Next from "../assets/icons/next.png";
 import { CardTitle } from "../../components/TradingCard/CardTitle";
