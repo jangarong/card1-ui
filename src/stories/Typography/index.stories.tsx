@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Typography } from "../../components";
+import { Typography, PaletteProvider } from "../../components";
 import React from "react";
 // import { TypographyProps } from "../../components/Typography/Typography";
 
@@ -11,7 +11,7 @@ export default {
   argTypes: {
     // This will make the control null, which is a workaround to removing the control column
     //  entirely.
-    children: { control: { type: null }},
+    children: { control: { type: null } },
     textType: { control: { type: null } },
     // TODO: A bit hacky, don't know why these parameters are showing up.
     '$$typeof': { table: { disable: true } },
@@ -26,7 +26,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const TypographyTest: ComponentStory<typeof Typography> = (text: JSX.Element) => (
-  <div>
+  <PaletteProvider>
     <Typography textType="h1">
       {text}
     </Typography>
@@ -36,7 +36,7 @@ const TypographyTest: ComponentStory<typeof Typography> = (text: JSX.Element) =>
     <Typography textType="p">
       {text}
     </Typography>
-  </div>
+  </PaletteProvider>
 );
 
 export const TypographyTest1 = TypographyTest.bind({});
