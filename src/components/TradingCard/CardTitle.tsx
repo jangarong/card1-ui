@@ -11,6 +11,9 @@ export interface CardTitleProps {
      * This is the subtitle that appears below the title.
      */
     subtitle: JSX.Element;
+    /**
+     * Whether to center the contents or not
+     */
     isCentered?: boolean;
 }
 
@@ -27,8 +30,8 @@ export const CardTitle = (props: CardTitleProps) => {
     }
     return (
         <div className={styles.TitleContainer + " " + styles.Center}>
-            <Typography textType="h1">{props.title}</Typography>
-            <Typography textType="h2">{props.subtitle}</Typography>
+            <Typography textType="h1" align="center">{props.title}</Typography>
+            <Typography textType="h2" align="center">{props.subtitle}</Typography>
         </div>
     );
 };

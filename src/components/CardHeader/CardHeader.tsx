@@ -29,7 +29,7 @@ const CardHeader = (props: CardHeaderProps) => {
         );
     }
     return (
-        <div className={styles.CardHeader + " " + styles.TopBorder} style={style}>
+        <div className={styles.CardHeaderCenter + " " + styles.TopBorder} style={style}>
             <div>{props.title}</div>
         </div>
     );
