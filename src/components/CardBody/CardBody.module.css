@@ -1,0 +1,20 @@
+.CardBody {
+    padding: 24pt;
+    display: flex;
+    justify-content: center;
+
+    /* background-color: #121212; */
+    opacity: 1;
+}
+
+.Border {
+    border-style: solid solid solid solid;
+    border-width: 1pt;
+    /* border-color: #7D7D7D; */
+}
+
+@media screen and (max-width: 680px) {
+    #body {
+        padding: 18pt 6pt;
+    }
+}

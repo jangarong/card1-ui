@@ -15,9 +15,13 @@ export interface TypographyProps {
      * "h1", "h2", p".
      */
     textType?: "h1" | "h2" | "p";
+    /**
+     * 
+     */
+    align?: "center" | "inherit" | "left" | "right" | "justify";
 }
 
-const Typography = ({ children, textType = "p" }: TypographyProps) => {
+const Typography = ({ children, textType = "p", align = "inherit" }: TypographyProps) => {
     const { palette }: { palette: ColorTypes } = usePalette();
     const colorMap = {
         h1: palette.text.primary,
@@ -26,8 +30,9 @@ const Typography = ({ children, textType = "p" }: TypographyProps) => {
     }
     const color = colorMap[textType];
     const className = !!textType ? `${styles.Typography} ${styles[textType.toUpperCase()]}` : styles.Typography;
+    const style = {color: color, textAlign: align}
     return (
-        <div className={className} style={{color: color}}>
+        <div className={className} style={style}>
             {children}
         </div>
     );

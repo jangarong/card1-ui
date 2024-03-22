@@ -13,6 +13,7 @@ export default {
     //  entirely.
     children: { control: { type: null } },
     textType: { control: { type: null } },
+    align: { control: { type: null } },
     // TODO: A bit hacky, don't know why these parameters are showing up.
     '$$typeof': { table: { disable: true } },
     key: { table: { disable: true } },
