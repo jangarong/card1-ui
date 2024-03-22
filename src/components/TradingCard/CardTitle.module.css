@@ -1,0 +1,10 @@
+.TitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Center {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,9 +5,12 @@
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_21fa2ddc4ec6cf0"
   },
-  "author": "jangarong",
+  "author": {
+    "name": "jangarong"
+  },
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@chromatic-com/storybook": "^1.2.20",
@@ -20,15 +23,19 @@
     "@storybook/addon-onboarding": "^8.0.0",
     "@storybook/addon-webpack5-compiler-swc": "^1.0.2",
     "@storybook/blocks": "^8.0.0",
+    "@storybook/nextjs": "^8.0.0",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^8.0.0",
     "@storybook/react-webpack5": "^8.0.0",
     "@storybook/test": "^8.0.0",
     "@types/react": "^18.2.64",
+    "chromatic": "^11.0.8",
     "css-loader": "^6.10.0",
+    "postcss": "^8.4.36",
     "react": "^18.2.0",
     "rollup": "^4.12.1",
     "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
     "storybook": "^8.0.0",
@@ -41,5 +48,8 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "next": "^14.1.3"
+  }
 }

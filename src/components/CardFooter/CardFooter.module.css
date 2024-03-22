@@ -1,0 +1,27 @@
+.CardFooter {
+    padding: 24pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CardFooterCenter {
+    padding: 24pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BottomBorder {
+    border-style: solid solid solid solid;
+    border-radius: 0 0 16pt 16pt;
+    border-width: 1pt;
+}
+
+@media screen and (max-width: 680px) {
+    .CardFooter {
+        flex-direction: row;
+        padding: 12pt;
+    }
+
+}

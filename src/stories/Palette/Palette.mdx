@@ -1,0 +1,85 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+<Meta title="card1-ui/Palette" />
+
+# Palette
+
+Before using the card1-ui components, you will need to use the following components:
+
+## palette
+This object is what all card1-ui components use to access color, which can be produced
+by having the component being a child of a PaletteProvider, while also calling the 
+usePalette function.
+
+Here are the colors that we use, in order from primary to tertiary:
+
+### Dark Theme
+<ColorPalette>
+  <ColorItem
+    title="Base Colors"
+    colors={{ dark: '#1C1C1C', dark2: '#262626', lightGrey: '#7D7D7D' }}
+  />
+  <ColorItem 
+    title="Text Colors" 
+    colors={{ white: '#FFFFFF', white: '#FFFFFF' }} 
+  />
+</ColorPalette>
+**TODO:** Choose better colors
+
+### Light Theme
+**TODO:** WIP
+
+### Structure
+Here is what the current `palette` structure looks like:
+```
+base: {
+    primary: dark,
+    secondary: dark2,
+    tertiary: lightGrey,
+},
+text: {
+    primary: white,
+    secondary: white
+}
+```
+
+## usePalette
+**Returns:** `{ palette }`
+
+Currently, usePalette returns the current palette depending on what the current theme is.
+If you want to use the colors that card1-ui follows, calling this function will get you
+all necessary colors.
+
+**Note/Todo:** Currently setting colors have not been implemented, as this is supposed to
+be a component library with a set of colors already established. If the colors will forever
+be the same, we'll probably just use a constant and remove PaletteProvider as a requirement
+(except for theme switching).
+
+## useTheme 
+
+**Returns:** `{ theme, setTheme }`
+
+This will allow you to toggle and set themes. `theme` will tell you which theme 
+it currently is (`'dark'` or `'light'`)
+
+## PalleteProvider
+
+This will allow all child elements to be able to access the functions `useTheme` 
+and `usePalette` which are necessary for card1-ui components, since that's where
+they get their color from.
+
+Here is an example:
+```tsx
+import { PaletteProvider } from 'card1-ui';
+
+const Example = () => (
+<PaletteProvider>
+    <Typography textType="h1">
+      Hello world!
+    </Typography>
+    <Typography textType="p">
+      The quick brown fox jumps over the lazy dog.
+    </Typography>
+</PaletteProvider>
+);
+```

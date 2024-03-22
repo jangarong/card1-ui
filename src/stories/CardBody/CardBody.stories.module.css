@@ -1,0 +1,28 @@
+.IconContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.Card {
+    width: 480pt;
+    height: fit-content;
+}
+
+.BodyArt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 32pt;
+    text-align: center;
+}
+
+@media screen and (max-width: 680px) {
+    .BodyArt {
+        height: 200pt;
+        max-width: 280pt;
+    }
+    .BodyArt {
+        padding: 48pt 18pt;
+    }
+}

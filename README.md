@@ -1,3 +1,13 @@
-Based off of the following tutorial: https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe
+# card1-ui
+Just my open-sourced component library for future projects!
 
-node version 18
+## Settings
+* Use node version 18.
+
+## Commands
+
+Run `npm run storybook` for the docs.
+
+Run `npm run rollup` for creating the `dist` folder.
+
+Run `npx chromatic --project-token=<token>`
