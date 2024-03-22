@@ -26,13 +26,8 @@ const CardFooterTestTemplate: ComponentStory<typeof CardFooter> = (props: CardFo
 );
 
 const CardFooterTestTemplate2: ComponentStory<typeof CardFooter> = (props: CardFooterProps) => {
-    const title = <CardTitle title={<div>Jan Garong</div>} subtitle={<div>Software Developer</div>} />;
-    const tip = (<div className={styles.IconContainer}>
-        <Image src={Next} alt={"Next"} width={46} />
-    </div>);
     return (<div className={styles.Card}>
         <PaletteProvider>
-            <CardHeader title={title} tip={tip} />
             <CardBody>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <Image src={Magichanics} alt="magichanics" className={styles.BodyArt} width={400} />
@@ -55,9 +50,9 @@ CardFooterTest1.args = {
     </div>),
 };
 
-export const CompleteCardTest = CardFooterTestTemplate2.bind({});
+export const CardFooterAndBodyTest = CardFooterTestTemplate2.bind({});
 
-CompleteCardTest.args = {
+CardFooterAndBodyTest.args = {
     children: (<div style={{ display: 'flex', justifyContent: 'center' }}>
         <div className={styles.BottomIconContainer}>
             <Image src={Resume} alt={"Next"} width={46} />

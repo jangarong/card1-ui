@@ -1,0 +1,17 @@
+.TopIconContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.Card {
+    width: 480pt;
+    height: fit-content;
+}
+
+.BottomIconContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 200pt;
+}

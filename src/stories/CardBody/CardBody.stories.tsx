@@ -29,7 +29,7 @@ const CardBodyTestTemplate2: ComponentStory<typeof CardBody> = (props: CardBodyP
     </div>);
     return (<div className={styles.Card}>
         <PaletteProvider>
-            <CardHeader title={title} tip={tip} />
+            {/* <CardHeader title={title} tip={tip} /> */}
             <CardBody {...props} />
         </PaletteProvider>
     </div>);
