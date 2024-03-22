@@ -1,25 +1,25 @@
-.CardHeader {
+.CardFooter {
     padding: 24pt;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.CardHeaderCenter {
+.CardFooterCenter {
     padding: 24pt;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.TopBorder {
+.BottomBorder {
     border-style: solid solid solid solid;
-    border-radius: 16pt 16pt 0 0;
+    border-radius: 0 0 16pt 16pt;
     border-width: 1pt;
 }
 
 @media screen and (max-width: 680px) {
-    .CardHeader {
+    .CardFooter {
         flex-direction: row;
         padding: 12pt;
     }
