@@ -11,7 +11,7 @@ const PageNote = ({ children } : PageNoteProps) => {
         backgroundColor: palette.base.primary,
         borderColor: palette.base.tertiary
     }
-    return (<div>
+    return (<div style={style} className={styles.CardHeaderCenter + " " + styles.TopBorder}>
         {children}
     </div>);
 }

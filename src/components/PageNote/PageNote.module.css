@@ -1,0 +1,19 @@
+.CardHeader {
+    padding: 24pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CardHeaderCenter {
+    padding: 24pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TopBorder {
+    border-style: solid solid solid solid;
+    border-radius: 16pt 16pt 0 0;
+    border-width: 1pt;
+}

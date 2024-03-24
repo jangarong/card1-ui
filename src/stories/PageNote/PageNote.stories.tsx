@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { PageNote, PaletteProvider } from "../../components";
+import { PageNote, PaletteProvider, Typography } from "../../components";
 import React from "react";
 // import { PageNoteProps } from "../../components/PageNote/PageNote";
 
@@ -21,4 +21,4 @@ const PageNoteTest: ComponentStory<typeof PageNote> = (text: JSX.Element) => (
 
 export const PageNoteTest1 = PageNoteTest.bind({});
 
-PageNoteTest1.args = <div>The quick brown fox jumps over the lazy dog.</div>
+PageNoteTest1.args = <Typography textType="h1">The quick brown fox jumps over the lazy dog.</Typography>
